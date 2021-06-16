@@ -4,7 +4,7 @@ FusionAuth user search has some limits. See https://fusionauth.io/docs/v1/tech/r
 
 This project contains helpful scripts to work around these limits and allow you to download all your users.
 
-the `fulluserdownload.sh` script iterates the users with an email prefix of `a-z` or `0-9`. (Elasticsearch is case insensitive.) If there are more than 10000 results for any segment, it uses a second set of prefixes: `aa`, `ab`, `ac` and so on.
+The `fulluserdownload.sh` script iterates the users with an email prefix of `a-z` or `0-9`. (Elasticsearch is case insensitive.) If there are more than 10000 results for any segment, it uses a second set of prefixes: `aa`, `ab`, `ac` and so on.
 
 If you need to search usernames or have so many users that you need to do a third letter on the prefix, you'll have to modify the script.
 
