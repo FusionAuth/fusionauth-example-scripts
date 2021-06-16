@@ -27,3 +27,7 @@ Update `fulluserdownload.sh` with your API key.
 ```
 
 All users will be in a `users.json` file. They will be in an array with the key `users`.
+
+## Learn more
+
+Learn more about FusionAuth: https://fusionauth.io
