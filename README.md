@@ -11,6 +11,7 @@ If you need to search usernames or have so many users that you need to do a thir
 ## Prerequisites
 
 * bash
+* curl
 * jq https://stedolan.github.io/jq/download/
 * an API key that can hit the `/api/user/search` endpoint
 * using FusionAuth with the Elasticsearch search engine
