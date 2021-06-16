@@ -18,7 +18,8 @@ If you need to search usernames or have so many users that you need to do a thir
 
 ## Setup
 
-Update `fulluserdownload.sh` with your API key.
+Update `fulluserdownload.sh` with your API key and your FusionAuth instance hostname.
+
 
 ## Usage
 
