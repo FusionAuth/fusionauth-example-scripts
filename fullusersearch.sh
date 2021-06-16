@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API_KEY=bf69486b-4733-4470-a592-f1bfce7af580
+API_KEY=...
 
 filename=myusers.txt
 max_total=0
