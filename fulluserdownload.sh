@@ -31,7 +31,7 @@ else
   for fc in {a..z} {0..9}; do
     for sc in {a..z} {0..9}; do
       printf "."
-      curl -s -H "Authorization: $API_KEY" $fa_hostname'/api/user/search/?queryString=email:'$fc$sc'*&numberOfResults=10000' > $tmpdir/file.$fc
+      curl -s -H "Authorization: $API_KEY" $fa_hostname'/api/user/search/?queryString=email:'$fc$sc'*&numberOfResults=10000' > $tmpdir/file.$fc.$sc
     done
   done
 fi
