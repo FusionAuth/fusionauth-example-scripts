@@ -35,7 +35,7 @@ sh setupspecialversion.sh tryidentitylinking
 
 After the docker templates are ready to roll, `cd` to the new directory.
 
-Modify the `kickstart/kickstart.json` file as needed to set up your instance. In particular either remove the license or add in your own license.
+Modify the `kickstart/kickstart.json` file as needed to set up your instance. In particular either remove the license or add in your own license. You can also look at our kickstart example files: https://github.com/fusionauth/fusionauth-example-kickstart
 
 Then, run `docker-compose up` and you'll have a new environment for testing/using/etc.
 
@@ -60,6 +60,7 @@ You can also start a container from a clean slate, if you are trying to test sta
 * running `docker volume ls` to list all volumes 
 * running `docker volume rm issue253_db_dataissue253` and `docker volume rm issue253_es_dataissue253` to remove the postgresql and elasticsearch volumes
 * Run `docker-compose up` to start from a clean slate.
+
 
 
 Learn more about FusionAuth at https://fusionauth.io/
