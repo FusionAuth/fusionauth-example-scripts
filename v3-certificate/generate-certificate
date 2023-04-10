@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#set -e
-
 # Checking openssl
 if [[ -z $(which openssl) ]]; then
   echo "Please download openssl and make sure it is available in your PATH variable"
@@ -35,8 +33,8 @@ fi
 # FusionAuth API Key
 read -r -p "API Key with /api/key/import endpoint:      " API_KEY
 API_KEY_LENGTH=${#API_KEY}
-if [ "$API_KEY_LENGTH" -ne 56 ]; then
-  echo "Your API Key seems invalid. Please make sure you copied it correctly."
+if [[ -z "$API_KEY_LENGTH" ]]; then
+  echo "Please provide an API Key."
   exit 2
 fi
 
@@ -62,7 +60,7 @@ fi
 # Creating certificate
 RSA_LENGTH=2048
 echo "Generating certificate..."
-if ! openssl req -x509 -newkey "rsa:$RSA_LENGTH" -nodes -keyout "$PRIVATE_KEY_FILE" -out "$PUBLIC_KEY_FILE" -sha256 -days 365 -subj "/CN=$FA_DOMAIN/"; then
+if ! openssl req -x509 -newkey "rsa:$RSA_LENGTH" -nodes -keyout "$PRIVATE_KEY_FILE" -out "$PUBLIC_KEY_FILE" -sha256 -days 3650 -subj "/CN=$FA_DOMAIN/"; then
   echo "Error generating certificate. Check messages above for more details."
   exit 4
 fi
