@@ -5,8 +5,8 @@ This sample script automatically generates an X.509 v3 Certificate using RSA and
 ## Prerequisites
 
 - [bash](https://www.gnu.org/software/bash/) to run the script
-- [openssl](https://stedolan.github.io/jq/) to issue certificates
-- [jq](https://www.openssl.org/) to handle JSON objects
+- [openssl](https://www.openssl.org/) to issue certificates
+- [jq](https://stedolan.github.io/jq/) to handle JSON objects
 
 ## Usage
 

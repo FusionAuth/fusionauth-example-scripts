@@ -32,8 +32,7 @@ fi
 
 # FusionAuth API Key
 read -r -p "API Key with /api/key/import endpoint:      " API_KEY
-API_KEY_LENGTH=${#API_KEY}
-if [[ -z "$API_KEY_LENGTH" ]]; then
+if [[ -z "$API_KEY" ]]; then
   echo "Please provide an API Key."
   exit 2
 fi
