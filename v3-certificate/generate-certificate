@@ -94,6 +94,6 @@ if ! curl --fail-with-body -s -o /dev/null \
   exit 5
 fi
 
-echo "Successfuly uploaded key to the Key Master."
+echo "Successfully uploaded key to the Key Master."
 echo "Here is the generated public key:"
 echo "$PUBLIC_KEY"
