@@ -1,4 +1,4 @@
-## Client side password checker example
+## Client-side Password Checker Example
 
 FusionAuth provides password rules, configurable at the [tenant level](https://fusionauth.io/docs/v1/tech/core-concepts/tenants). These include checks on a password value such as:
 
