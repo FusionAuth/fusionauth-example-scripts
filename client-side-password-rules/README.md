@@ -10,7 +10,7 @@ The [latest guidance from NIST recommends avoiding such rules](https://fusionaut
 
 These password rules are enforced in the hosted login pages, but only after the user has submitted the form. They are also available as freemarker variables on the [registration page](https://fusionauth.io/docs/v1/tech/themes/template-variables#oauth-register) and the [change password page](https://fusionauth.io/docs/v1/tech/themes/template-variables#oauth-change-password-form).
 
-This example shows how to use the `passwordValidationRules` freemarker variables offer feedback to the user client-side using JavaScript, in the hosted login pages. It will also disable submission of the form if the rules are not met.
+This example shows how to use the `passwordValidationRules` freemarker variables to offer user feedback client-side using JavaScript, in the hosted login pages. It will also disable submission of the form if the rules are not met.
 
 To use this script, make `FusionAuthPasswordChecker.js` available at a public URL or modify the FusionAuth template files to include this JavaScript on the registration page and change password pages. 
 
