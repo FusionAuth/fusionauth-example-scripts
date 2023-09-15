@@ -29,6 +29,12 @@ Update `fulluserdownload.sh` with your API key and your FusionAuth instance host
 
 All users will be in a `users.json` file. They will be in an array with the key `users`.
 
+## SSO stats
+
+If you want to find out how many of your users are logging in with various identity providers, use `ssostats.sh`. 
+
+It expects the `users.json` file to exist, and you need to update it with an API key capable of retrieving identity provider links.
+
 ## Learn more
 
 Learn more about FusionAuth: https://fusionauth.io
