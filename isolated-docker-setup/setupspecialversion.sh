@@ -15,12 +15,12 @@ if [ "x$2" != "x" ]; then
 fi
 
 echo "using $FA_VERSION"
+mkdir -p tmp/$UNIQID
+cp -pr template/* tmp/$UNIQID/
 
-cp -pr template $UNIQID
-
-for i in $UNIQID/*.yml; do
+for i in tmp/$UNIQID/*.yml; do
   sed 's/XXX/'$UNIQID'/g' $i > $i.bak ; mv $i.bak $i
   sed 's/YYY/'$FA_VERSION'/g' $i > $i.bak ; mv $i.bak $i
 done
 
-
+echo "new environment: tmp/$UNIQID"
