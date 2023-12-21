@@ -43,7 +43,7 @@ You can only run one instance at a time (ports conflict otherwise), but you can 
 
 ### Modifying Compose Files
 
-If you update the docker-compose.yml and docker-compose.override.yml files, make sure you leave the `XXX` and `YYY` tokens otherwise this won't work.
+If you update the docker-compose.yml and docker-compose.override.yml files, make sure you leave the `REPLACE_WITH_UNIQID` and `REPLACE_WITH_FA_VERSION` tokens otherwise this won't work.
 
 ### Troubleshooting
 
