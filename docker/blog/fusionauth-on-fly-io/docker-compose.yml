@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+  search:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+    environment:
+      cluster.name: fusionauth
+      bootstrap.memory_lock: "true"
+      discovery.type: single-node
+      ES_JAVA_OPTS: ${ES_JAVA_OPTS}
+    healthcheck:
+      test: [ "CMD", "curl",  "--fail" ,"--write-out", "'HTTP %{http_code}'", "--silent", "--output", "/dev/null", "http://localhost:9200/" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - search_net
+    restart: unless-stopped
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - search_data:/usr/share/elasticsearch/data
+
+  fusionauth:
+    image: fusionauth/fusionauth-app:latest
+    depends_on:
+      search:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: ${POSTGRES_URL}
+      DATABASE_ROOT_USERNAME: ${POSTGRES_USER}
+      DATABASE_ROOT_PASSWORD: ${POSTGRES_PASSWORD}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      FUSIONAUTH_APP_MEMORY: ${FUSIONAUTH_APP_MEMORY}
+      FUSIONAUTH_APP_RUNTIME_MODE: development
+      FUSIONAUTH_APP_URL: http://fusionauth:9011
+      SEARCH_SERVERS: http://search:9200
+      SEARCH_TYPE: elasticsearch
+
+    networks:
+      - search_net
+    restart: unless-stopped
+    ports:
+      - 9011:9011
+    volumes:
+      - fusionauth_config:/usr/local/fusionauth/config
+
+networks:
+  search_net:
+    driver: bridge
+
+volumes:
+  fusionauth_config:
+  search_data:
