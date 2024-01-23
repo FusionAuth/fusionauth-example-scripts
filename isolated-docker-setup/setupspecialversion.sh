@@ -17,6 +17,7 @@ fi
 echo "using $FA_VERSION"
 mkdir -p tmp/$UNIQID
 cp -pr template/* tmp/$UNIQID/
+cp -pr template/.env tmp/$UNIQID/
 
 for i in tmp/$UNIQID/*.yml; do
   sed 's/XXX/'$UNIQID'/g' $i > $i.bak ; mv $i.bak $i
