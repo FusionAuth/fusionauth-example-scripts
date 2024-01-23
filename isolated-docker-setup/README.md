@@ -37,13 +37,13 @@ After the docker templates are ready to roll, `cd` to the new directory.
 
 Modify the `kickstart/kickstart.json` file as needed to set up your instance. In particular either remove the license or add in your own license. You can also look at our kickstart example files: https://github.com/fusionauth/fusionauth-example-kickstart
 
-Then, run `docker-compose up` and you'll have a new environment for testing/using/etc.
+Then, run `docker compose up` and you'll have a new environment for testing/using/etc.
 
 You can only run one instance at a time (ports conflict otherwise), but you can bring them up and down as needed. Every instance will store their info separately because the compose files have unique names.
 
 ### Modifying Compose Files
 
-If you update the docker-compose.yml and docker-compose.override.yml files, make sure you leave the `XXX` and `YYY` tokens otherwise this won't work.
+If you update the docker-compose.yml and docker-compose.override.yml files, make sure you leave the `REPLACE_WITH_UNIQID` and `REPLACE_WITH_FA_VERSION` tokens otherwise this won't work.
 
 ### Troubleshooting
 
