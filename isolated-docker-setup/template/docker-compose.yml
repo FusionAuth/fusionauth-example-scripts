@@ -43,6 +43,7 @@ services:
     restart: unless-stopped
     ports:
       - 9011:9011
+      - 9013:9013
     volumes:
       - fusionauth_config_REPLACE_WITH_UNIQID:/usr/local/fusionauth/config
       - ./kickstart:/usr/local/fusionauth/kickstart
