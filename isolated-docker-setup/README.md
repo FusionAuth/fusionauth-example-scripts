@@ -47,6 +47,8 @@ If you update the docker-compose.yml and docker-compose.override.yml files, make
 
 ### Troubleshooting
 
+#### Network issues
+
 You may run out of network capacity since you'll have a lot of different networks. If you see this error message:
 
 ```
@@ -55,13 +57,14 @@ ERROR: could not find an available, non-overlapping IPv4 address pool among the 
 
 run `docker network prune` to remove all unused networks. From: https://stackoverflow.com/questions/43720339/docker-error-could-not-find-an-available-non-overlapping-ipv4-address-pool-am
 
-You can also start a container from a clean slate, if you are trying to test startup issues or kickstart. Do so by:
 
-* running `docker volume ls` to list all volumes 
-* running `docker volume rm issue253_db_dataissue253` and `docker volume rm issue253_es_dataissue253` to remove the postgresql and elasticsearch volumes
-* Run `docker-compose up` to start from a clean slate.
+#### Removing volumes
 
+You can also start a container from a clean slate, if you are trying to test startup issues or kickstart. (If you forgot to set up kickstart in your preferred config, for example.)
 
+ Do so by running `docker compose down -v` to delete all the volumes.
+
+## Learn More
 
 Learn more about FusionAuth at https://fusionauth.io/
 
