@@ -18,6 +18,17 @@
       "body": {
         "application": {
           "name": "Pied Piper",
+          "oauthConfiguration": {
+            "authorizedRedirectURLs": [
+              "https://fusionauth.io"
+            ],
+            "logoutURL": "https://fusionauth.io",
+            "enabledGrants": [
+              "authorization_code",
+              "refresh_token"
+            ],
+            "debug": true
+          },
           "roles": [
             {
               "name": "dev"
