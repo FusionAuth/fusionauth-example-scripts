@@ -20,7 +20,7 @@ This example shows how to use the `passwordValidationRules` freemarker variables
 
 To use this script, make `FusionAuthPasswordChecker.js` available at a public URL or modify the FusionAuth template files to include this JavaScript on the registration page and change password pages. 
 
-```
+```html
 <script src="https://yourcdn.example.com/path/to/FusionAuthPasswordChecker.js"></script>
 ```
 
