@@ -176,8 +176,8 @@
         "emailTemplate": {
           "defaultFromName": "FusionAuth Development",
           "defaultSubject": "A second factor method was added",
-          "defaultHtmlTemplate": "@{emails/two-factor-login.html.ftl}",
-          "defaultTextTemplate": "@{emails/two-factor-login.txt.ftl}",
+          "defaultHtmlTemplate": "@{emails/two-factor-add.html.ftl}",
+          "defaultTextTemplate": "@{emails/two-factor-add.txt.ftl}",
           "fromEmail": "dev@fusionauth.io",
           "name": "Two Factor Authentication Method Added"
         }
@@ -190,8 +190,8 @@
         "emailTemplate": {
           "defaultFromName": "FusionAuth Development",
           "defaultSubject": "A second factor method was removed",
-          "defaultHtmlTemplate": "@{emails/two-factor-login.html.ftl}",
-          "defaultTextTemplate": "@{emails/two-factor-login.txt.ftl}",
+          "defaultHtmlTemplate": "@{emails/two-factor-remove.html.ftl}",
+          "defaultTextTemplate": "@{emails/two-factor-remove.txt.ftl}",
           "fromEmail": "dev@fusionauth.io",
           "name": "Two Factor Authentication Method Removed"
         }
