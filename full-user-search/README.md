@@ -45,6 +45,12 @@ If you want to find out how many of your users are logging in with various ident
 
 It expects the `users.json` file to exist, and you need to update it with an API key capable of retrieving identity provider links.
 
+## User Count
+
+If you want to have an accurate count of users, you can use `countusers.sh`. This will return an exact count of users without retrieving all their data, reducing load on your instance. 
+
+If you want to find user counts that match a certain query, modify `queryString` in this script.
+
 ## Learn more
 
 Learn more about FusionAuth: https://fusionauth.io
